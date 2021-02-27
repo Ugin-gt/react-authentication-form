@@ -6,9 +6,9 @@ const SingIn = props => {
   const onSubmit = values => console.log(values);
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <h1> Login to your account </h1>
-      <SingInForm />
+      <SingInForm  onSubmit={onSubmit}/>
     </div>
   );
 };

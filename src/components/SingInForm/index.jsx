@@ -1,6 +1,8 @@
 import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import PropTypes from 'prop-types';
+import Input from '../Input';
+import { SING_IN_SCHEMA } from '../../utils';
 
 const SingInForm = props => {
   const initialValues = {
@@ -18,8 +20,20 @@ const SingInForm = props => {
         return (
           <Form>
             <Field name='email' />
-            <Field type='password' name='password' />
-            <Field type='submit' value='Submit' />
+            {fieldProps => <Input {...fieldProps} placeholder='Enter Email' />}
+            <Field />
+
+            <Field name='password' />
+            {fieldProps => (
+              <Input
+                {...fieldProps}
+                type='password'
+                placeholder='Enter Password'
+              />
+            )}
+            <Field />
+
+            <Field type='submit' value='Submit Form' />
           </Form>
         );
       }}
