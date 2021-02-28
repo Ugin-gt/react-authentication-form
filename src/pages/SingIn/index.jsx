@@ -1,5 +1,5 @@
 import React from 'react';
-import SingInForm from '../../components/SingInForm';
+import SingInForm from '../../components/SignInForm';
 import {} from 'formik'
 
 const SingIn = props => {

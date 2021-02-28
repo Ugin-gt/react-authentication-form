@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px 180px;
+  background-color: rgb(62, 169, 245);
+  font-family: Gotham SSm A, Gotham SSm B, Halvetica, sans-serif;
+  color: white;
+}
+
+img {
+}
+
+.onDiv {
+  box-sizing: border-box;
+  border: 1px solid white;
+  padding: 14px 18px;
+  border-radius: 4px;
+  font-weight:bolder ;
+  font-size: 18px;
+}
