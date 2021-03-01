@@ -15,3 +15,21 @@ export const SIGN_IN_SCHEMA = Yup.object({
     )
     .required(),
 });
+
+export const SIGN_UP_SCHEMA = Yup.object({
+  firstName: NAME_SCHEMA,
+  lastName: NAME_SCHEMA,
+  displayName: NAME_SCHEMA,
+  email: Yup.string()
+    .email('Email must be a valid email')
+    .required(),
+  password: Yup.string()
+    .matches(
+      /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,32}$/,
+      'Password must contain one big letter and so on....'
+    )
+    .required(),
+  passwordConfirmation: Yup.string()
+    .oneOf([Yup.ref('password')], 'Password & Confirm should be the same')
+    .required(),
+});

@@ -6,6 +6,7 @@ import styles from './SignInForm.module.scss';
 import Input from '../Input';
 
 const SignInForm = props => {
+  console.log(props);
   const initialValues = {
     email: '',
     password: '',
@@ -34,7 +35,7 @@ const SignInForm = props => {
             )}
             </Field>
 
-            <Field type='submit' value='LOGIN' />
+            <Field  className={styles.submit} type='submit' value='LOGIN' />
           </Form>
         );
       }}

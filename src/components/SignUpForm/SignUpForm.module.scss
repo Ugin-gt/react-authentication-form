@@ -1,0 +1,24 @@
+.form {
+  max-width: 700px;
+  width: 100%;
+}
+.signUpForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  label {
+    flex-basis: 48%;
+  }
+}
+.createAcc {
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 4px;
+  height: 64px;
+  width: 100%;
+  border: 0;
+  font-weight: bolder;
+  color: white;
+  background-color: rgb(40, 210, 208);
+}

@@ -1,38 +1,29 @@
 import React, { Component } from 'react';
 import styles from './Header.module.scss';
 import logo from '../../logo/logo.png';
+import {Link} from 'react-router-dom';
 import SignIn from '../../pages/SignIn'
-// import SignUp from '../../pages/SignUp';
+import SignUp from '../../pages/SignUp';
 
-class Header extends Component {
-  constructor (props) {
-    super(props);
-    this.state = { page: true };
-  }
-  switchPage = () => {
-    this.setState(state => {
-      return {
-        page: !state.page,
-        //  ? SignUp : SignIn
-      };
-    });
-  };
+const Header = props => {
+  console.log(props);
+  const { pathname, ...rest } = props;
 
-  render () {
-    const { page } = this.state;
+
+
 
     return (
       <div>
         <div className={styles.container}>
           <img src={logo} alt={'logo'} />
-          <div className={styles.onDiv} onClick={this.switchPage}>
-            {page ? 'Signup' : 'Login'}
-
-          </div>
+          <Link className={styles.onDiv} to='/'>Signup</Link>
+          <Link to='/sign-up'>Login</Link>
+          {/* <Link className={styles.onDiv} {pathname = {'/'} ? 'Signup'  >
+            {pathname ={ }  ? 'Signup' : 'Login'} */}
         </div>
       </div>
     );
-  }
+  
 }
 
 export default Header;
