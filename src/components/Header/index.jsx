@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './Header.module.scss';
 import logo from '../../logo/logo.png';
-// import SignIn from '../../pages/SignIn'
+import SignIn from '../../pages/SignIn'
 // import SignUp from '../../pages/SignUp';
 
 class Header extends Component {
@@ -27,6 +27,7 @@ class Header extends Component {
           <img src={logo} alt={'logo'} />
           <div className={styles.onDiv} onClick={this.switchPage}>
             {page ? 'Signup' : 'Login'}
+
           </div>
         </div>
       </div>

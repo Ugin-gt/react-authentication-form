@@ -12,9 +12,9 @@ const Input = props => {
     [styles.invalidInput]: meta.touched && meta.error,
   });
 
-  return (
+  return (  
     <>
-      <label classnames={styles.container}>
+      <label classname={styles.input}>
 
         <input {...field} type='text' className={classNames} {...rest} />
 

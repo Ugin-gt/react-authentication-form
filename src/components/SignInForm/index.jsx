@@ -2,9 +2,10 @@ import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import PropTypes from 'prop-types';
 import { SIGN_IN_SCHEMA } from '../../utils/validationSchemas';
+import styles from './SignInForm.module.scss';
 import Input from '../Input';
 
-const SingInForm = props => {
+const SignInForm = props => {
   const initialValues = {
     email: '',
     password: '',
@@ -18,7 +19,7 @@ const SingInForm = props => {
     >
       {formProps => {
         return (
-          <Form>
+          <Form >
             <Field name='email'>
             {fieldProps => <Input {...fieldProps} placeholder='Email address' />}
             </Field >
@@ -41,8 +42,8 @@ const SingInForm = props => {
   );
 };
 
-SingInForm.propTypes = {
+SignInForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
 
-export default SingInForm;
+export default SignInForm;
