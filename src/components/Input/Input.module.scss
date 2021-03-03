@@ -15,3 +15,22 @@
 .invalidInput {
   border: 3px solid red;
 }
+
+.arrow {
+	width: 300px;
+	padding: 10px 10px;
+	position: relative;
+  color: #9CA8B7;
+	background: #eee;
+	border-radius: 4px;
+}
+.arrow:before {
+	content: ""; 
+	border: solid transparent;
+	position: absolute;    
+	left: 9px;    
+	bottom: 100%;
+	border-bottom-color: #eee;
+	border-width: 9px;
+	margin-left: 0;
+}

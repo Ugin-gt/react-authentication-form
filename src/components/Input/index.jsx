@@ -12,13 +12,12 @@ const Input = props => {
     [styles.invalidInput]: meta.touched && meta.error,
   });
 
-  return (  
+  return (
     <>
       <label classname={styles.input}>
-
         <input {...field} type='text' className={classNames} {...rest} />
 
-        <ErrorMessage component='div' name={field.name} />
+        <ErrorMessage component='div' className={styles.arrow} name={field.name} />
       </label>
     </>
   );

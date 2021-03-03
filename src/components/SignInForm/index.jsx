@@ -20,7 +20,7 @@ const SignInForm = props => {
     >
       {formProps => {
         return (
-          <Form >
+          <Form className={styles.form}>
             <Field name='email'>
             {fieldProps => <Input {...fieldProps} placeholder='Email address' />}
             </Field >
