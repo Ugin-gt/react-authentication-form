@@ -34,7 +34,9 @@ const SignInForm = props => {
               />
             )}
             </Field>
-
+            
+            <input name='rememberMe' type = 'checkbox'/>
+            <label className={styles.label} for='rememberMe'>Remember Me</label>
             <Field  className={styles.submit} type='submit' value='LOGIN' />
           </Form>
         );

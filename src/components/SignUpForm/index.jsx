@@ -72,6 +72,26 @@ const SignUpForm = props => {
               </Field>
             </div>
 
+            <div className={styles.clientRadio}>
+              <input name='joinAsClient' type='radio'></input>
+              <label for='joinAsClient' className={styles.joinAs}>
+                Join As a Buyer
+                <span className={styles.joinAsDesc}>
+                  I am looking for a Name, Logo or Tagline for my business,
+                  brand or product.
+                </span>
+              </label>
+            </div>
+            <div className={styles.clientRadio}>
+              <input name='joinAsCreative' type='radio'></input>
+              <label for='joinAsCreative' className={styles.joinAs}>
+                Join As a Creative or Marketplace Seller
+                <span className={styles.joinAsDesc}>
+                  I plan to submit name ideas, Logo designs or sell names in
+                  Domain Marketplace.
+                </span>
+              </label>
+            </div>
             <Field
               className={styles.createAcc}
               type='createAcc'

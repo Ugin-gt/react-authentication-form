@@ -1,5 +1,5 @@
 .form {
-  max-width: 700px;
+  max-width: 600px;
   width: 100%;
 }
 .signUpForm {
@@ -10,6 +10,34 @@
     flex-basis: 48%;
   }
 }
+.clientRadio{
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  color: white;
+  border:1px solid white;
+  padding: 15px 10px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+}
+.joinAs{
+  font-size: 23px;
+  padding-left: 10px;
+  padding-bottom: 15px;
+
+
+
+}
+.joinAsDesc{
+  display: block;
+  text-align: left;
+  padding-top: 5px;
+  font-size: 14px;
+
+
+}
+
 .createAcc {
   cursor: pointer;
   font-size: 18px;

@@ -1,9 +1,20 @@
 .form {
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
 }
+
+.label {
+  padding-left: 5px;
+  color: #fff;
+  font-size: 13px;
+  max-width: 100%;
+  
+  font-weight: 700;
+}
+
 .submit {
   cursor: pointer;
+  margin-top: 15px;
   font-size: 18px;
   text-align: center;
   border-radius: 4px;

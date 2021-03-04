@@ -12,7 +12,7 @@ const Header = props => {
         <div className={styles.container}>
           <img src={logo} alt={'logo'} />
           <Link className={styles.onDiv} to='/'>Signup</Link>
-          <Link to='/sign-up'>Login</Link>
+          <Link className={styles.onDiv} to='/sign-up'>Login</Link>
           {/* <Link className={styles.onDiv} {pathname ='/' ? {to='/'>Signup<'Signup'  >
             {pathname ={ }  ? 'Signup' : 'Login'} */}
         </div>
