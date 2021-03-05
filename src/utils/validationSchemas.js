@@ -32,4 +32,7 @@ export const SIGN_UP_SCHEMA = Yup.object({
   passwordConfirmation: Yup.string()
     .oneOf([Yup.ref('password')], 'Password & Confirm should be the same')
     .required(),
+  role: Yup.string()
+    .oneOf(['buyer','creative'])
+    .required('Check the one of "Join as...", please'),
 });

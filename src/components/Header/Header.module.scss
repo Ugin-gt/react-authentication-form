@@ -3,7 +3,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 180px;
+  width: 90%;
+  margin: 0 auto;
+  padding:40px;
   background-color: rgb(62, 169, 245);
   font-family: Gotham SSm A, Gotham SSm B, Halvetica, sans-serif;
   color: white;
@@ -18,7 +20,7 @@ img {
   border: 1px solid white;
   padding: 10px 15px;
   border-radius: 5px;
-  font-weight:bolder ;
+  font-weight: bolder;
   font-size: 18px;
-  text-decoration: none ;
+  text-decoration: none;
 }

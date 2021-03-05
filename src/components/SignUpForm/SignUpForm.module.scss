@@ -10,32 +10,47 @@
     flex-basis: 48%;
   }
 }
-.clientRadio{
+.clientRadio {
   display: flex;
   flex-direction: row;
   align-content: space-between;
   color: white;
-  border:1px solid white;
+  border: 1px solid white;
   padding: 15px 10px;
   margin-top: 15px;
   margin-bottom: 20px;
-
 }
-.joinAs{
+.joinAs {
   font-size: 23px;
   padding-left: 10px;
   padding-bottom: 15px;
-
-
-
 }
-.joinAsDesc{
+.joinAsDesc {
   display: block;
   text-align: left;
   padding-top: 5px;
   font-size: 14px;
+}
 
-
+.arrow {
+  width: 260px;
+  padding: 15px 20px;
+  position: absolute;
+  font-size: 15px;
+  text-transform: capitalize;
+  color: white;
+  background: rgb(199, 0, 0);
+  border-radius: 4px;
+}
+.arrow:before {
+  content: '';
+  border: solid transparent;
+  position: absolute;
+  left: 9px;
+  bottom: 100%;
+  border-bottom-color: rgb(199, 0, 0);
+  border-width: 9px;
+  margin-left: 0;
 }
 
 .createAcc {
@@ -43,7 +58,7 @@
   font-size: 18px;
   text-align: center;
   border-radius: 4px;
-  height: 64px;
+  padding: 25px 0;
   width: 100%;
   border: 0;
   font-weight: bolder;

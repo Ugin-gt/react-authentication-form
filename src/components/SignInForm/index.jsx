@@ -6,7 +6,6 @@ import styles from './SignInForm.module.scss';
 import Input from '../Input';
 
 const SignInForm = props => {
-  console.log(props);
   const initialValues = {
     email: '',
     password: '',
@@ -22,22 +21,26 @@ const SignInForm = props => {
         return (
           <Form className={styles.form}>
             <Field name='email'>
-            {fieldProps => <Input {...fieldProps} placeholder='Email address' />}
-            </Field >
+              {fieldProps => (
+                <Input {...fieldProps} placeholder='Email address' autoFocus />
+              )}
+            </Field>
 
             <Field name='password'>
-            {fieldProps => (
-              <Input
-                {...fieldProps}
-                type='password'
-                placeholder='Password'
-              />
-            )}
+              {fieldProps => (
+                <Input {...fieldProps} type='password' placeholder='Password' />
+              )}
             </Field>
-            
-            <input name='rememberMe' type = 'checkbox'/>
-            <label className={styles.label} for='rememberMe'>Remember Me</label>
-            <Field  className={styles.submit} type='submit' value='LOGIN' />
+
+            <label className={styles.label} htmlFor='rememberMe'>
+              <input
+                className={styles.checkbox}
+                id='rememberMe'
+                type='checkbox'
+              />
+              Remember Me
+            </label>
+            <Field className={styles.submit} type='submit' value='LOGIN' />
           </Form>
         );
       }}

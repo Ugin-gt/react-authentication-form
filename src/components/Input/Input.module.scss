@@ -1,9 +1,9 @@
 .input {
   display: flex;
-  font-size: 16px;
-  color: #9CA8B7;
+  font-size: 15px;
+  color: #9ca8b7;
   padding: 25px 15px;
-  width:100%;
+  width: 100%;
   margin-bottom: 10px;
   border: 2px solid white;
   border-radius: 4px;
@@ -17,20 +17,22 @@
 }
 
 .arrow {
-	width: 300px;
-	padding: 10px 10px;
-	position: relative;
-  color: #9CA8B7;
-	background: #eee;
-	border-radius: 4px;
+  width: 260px;
+  padding: 15px 20px;
+  position: absolute;
+  font-size: 15px;
+  text-transform: capitalize;
+  color: white;
+  background: rgb(199, 0, 0);
+  border-radius: 4px;
 }
 .arrow:before {
-	content: ""; 
-	border: solid transparent;
-	position: absolute;    
-	left: 9px;    
-	bottom: 100%;
-	border-bottom-color: #eee;
-	border-width: 9px;
-	margin-left: 0;
+  content: '';
+  border: solid transparent;
+  position: absolute;
+  left: 9px;
+  bottom: 100%;
+  border-bottom-color: rgb(199, 0, 0);
+  border-width: 9px;
+  margin-left: 0;
 }

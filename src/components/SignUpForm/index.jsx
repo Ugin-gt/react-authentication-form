@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import PropTypes from 'prop-types';
 import styles from './SignUpForm.module.scss';
 import { SIGN_UP_SCHEMA } from '../../utils/validationSchemas';
@@ -12,6 +12,8 @@ const SignUpForm = props => {
     displayName: '',
     email: '',
     password: '',
+    passwordConfirmation: '',
+    role: '',
   };
 
   return (
@@ -26,7 +28,7 @@ const SignUpForm = props => {
             <div className={styles.signUpForm}>
               <Field name='firstName'>
                 {fieldProps => (
-                  <Input {...fieldProps} placeholder='First Name' />
+                  <Input {...fieldProps} placeholder='First Name' autoFocus />
                 )}
               </Field>
 
@@ -73,8 +75,8 @@ const SignUpForm = props => {
             </div>
 
             <div className={styles.clientRadio}>
-              <input name='joinAsClient' type='radio'></input>
-              <label for='joinAsClient' className={styles.joinAs}>
+              <input name='role' value='buyer' id='buyer' type='radio'></input>
+              <label htmlFor='buyer' className={styles.joinAs}>
                 Join As a Buyer
                 <span className={styles.joinAsDesc}>
                   I am looking for a Name, Logo or Tagline for my business,
@@ -83,8 +85,13 @@ const SignUpForm = props => {
               </label>
             </div>
             <div className={styles.clientRadio}>
-              <input name='joinAsCreative' type='radio'></input>
-              <label for='joinAsCreative' className={styles.joinAs}>
+              <input
+                name='role'
+                value='creative'
+                id='creative'
+                type='radio'
+              ></input>
+              <label htmlFor='creative' className={styles.joinAs}>
                 Join As a Creative or Marketplace Seller
                 <span className={styles.joinAsDesc}>
                   I plan to submit name ideas, Logo designs or sell names in
@@ -92,9 +99,15 @@ const SignUpForm = props => {
                 </span>
               </label>
             </div>
+            <ErrorMessage
+              name='role'
+              component='div'
+              className={styles.arrow}
+            />
+
             <Field
               className={styles.createAcc}
-              type='createAcc'
+              type='submit'
               value='Create account'
             />
           </Form>
