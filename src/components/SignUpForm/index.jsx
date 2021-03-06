@@ -38,7 +38,6 @@ const SignUpForm = props => {
                 )}
               </Field>
             </div>
-
             <div className={styles.signUpForm}>
               <Field name='displayName'>
                 {fieldProps => (
@@ -52,7 +51,6 @@ const SignUpForm = props => {
                 )}
               </Field>
             </div>
-
             <div className={styles.signUpForm}>
               <Field name='password'>
                 {fieldProps => (
@@ -73,9 +71,13 @@ const SignUpForm = props => {
                 )}
               </Field>
             </div>
-
             <div className={styles.clientRadio}>
               <input name='role' value='buyer' id='buyer' type='radio'></input>
+              <ErrorMessage
+                name='role'
+                component='div'
+                className={styles.arrow}
+              />
               <label htmlFor='buyer' className={styles.joinAs}>
                 Join As a Buyer
                 <span className={styles.joinAsDesc}>
@@ -91,6 +93,11 @@ const SignUpForm = props => {
                 id='creative'
                 type='radio'
               ></input>
+              <ErrorMessage
+                name='role'
+                component='div'
+                className={styles.arrow}
+              />
               <label htmlFor='creative' className={styles.joinAs}>
                 Join As a Creative or Marketplace Seller
                 <span className={styles.joinAsDesc}>
@@ -99,11 +106,6 @@ const SignUpForm = props => {
                 </span>
               </label>
             </div>
-            <ErrorMessage
-              name='role'
-              component='div'
-              className={styles.arrow}
-            />
 
             <Field
               className={styles.createAcc}

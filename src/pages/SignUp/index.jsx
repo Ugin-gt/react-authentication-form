@@ -4,7 +4,6 @@ import styles from './SignUp.module.scss';
 import {} from 'formik'
 
 const SignUp = props => {
-  console.log(props);
   const onSubmit = values => console.log(values);
   return (
     <div className={styles.signup}>

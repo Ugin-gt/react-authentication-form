@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Header.module.scss';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = props => {
-  const { pathname, ...rest } = props;
+  const switchPage = location => {
+    if (location.pathname === '/') {
+      return (
+        <Link className={styles.btnLink} to='/sign-up'>
+          Signup
+        </Link>
+      );
+    }
+    return (
+      <Link className={styles.btnLink} to='/'>
+        Login
+      </Link>
+    );
+  };
 
   return (
     <div>
@@ -11,14 +24,7 @@ const Header = props => {
         <a href='https://www.squadhelp.com/'>
           <img src='/assets/images/logo.png' alt={'logo'} />
         </a>
-        <Link className={styles.onDiv} to='/'>
-          Login
-        </Link>
-        <Link className={styles.onDiv} to='/sign-up'>
-          Signup
-        </Link>
-        {/* <Link className={styles.onDiv} to= { ? {'/'>Signup<'Signup'  >
-            {pathname ='/' ? {'Signup' : 'Login'} */}
+        <div>{switchPage(useLocation())}</div>
       </div>
     </div>
   );

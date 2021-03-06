@@ -4,7 +4,6 @@ import { ErrorMessage } from 'formik';
 import styles from './Input.module.scss';
 
 const Input = props => {
-  console.log(props);
   const { field, meta, form, ...rest } = props;
 
   const classNames = cx(styles.input, {
