@@ -20,17 +20,9 @@ const SignInForm = props => {
       {formProps => {
         return (
           <Form className={styles.form}>
-            <Field name='email'>
-              {fieldProps => (
-                <Input {...fieldProps} placeholder='Email address' autoFocus />
-              )}
-            </Field>
+            <Input name='email' placeholder='Email address' autoFocus />
 
-            <Field name='password'>
-              {fieldProps => (
-                <Input {...fieldProps} type='password' placeholder='Password' />
-              )}
-            </Field>
+            <Input name='password' type='password' placeholder='Password' />
 
             <label className={styles.label} htmlFor='rememberMe'>
               <input

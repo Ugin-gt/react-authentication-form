@@ -1,9 +1,10 @@
 import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import PropTypes from 'prop-types';
 import styles from './SignUpForm.module.scss';
 import { SIGN_UP_SCHEMA } from '../../utils/validationSchemas';
 import Input from '../Input';
+// import RadioForm from '../RadioForm';
 
 const SignUpForm = props => {
   const initialValues = {
@@ -26,58 +27,27 @@ const SignUpForm = props => {
         return (
           <Form className={styles.form}>
             <div className={styles.signUpForm}>
-              <Field name='firstName'>
-                {fieldProps => (
-                  <Input {...fieldProps} placeholder='First Name' autoFocus />
-                )}
-              </Field>
+              <Input name='firstName' placeholder='First Name' autoFocus />
 
-              <Field name='lastName'>
-                {fieldProps => (
-                  <Input {...fieldProps} placeholder='Last Name' />
-                )}
-              </Field>
+              <Input name='lastName' placeholder='Last Name' />
             </div>
             <div className={styles.signUpForm}>
-              <Field name='displayName'>
-                {fieldProps => (
-                  <Input {...fieldProps} placeholder='Display Name' />
-                )}
-              </Field>
+              <Input name='displayName' placeholder='Display Name' />
 
-              <Field name='email'>
-                {fieldProps => (
-                  <Input {...fieldProps} placeholder='Enter Email' />
-                )}
-              </Field>
+              <Input name='email' placeholder='Enter Email' />
             </div>
             <div className={styles.signUpForm}>
-              <Field name='password'>
-                {fieldProps => (
-                  <Input
-                    {...fieldProps}
-                    type='password'
-                    placeholder='Password'
-                  />
-                )}
-              </Field>
-              <Field name='passwordConfirmation'>
-                {fieldProps => (
-                  <Input
-                    {...fieldProps}
-                    type='password'
-                    placeholder='Password Confirmation'
-                  />
-                )}
-              </Field>
+              <Input name='password' type='password' placeholder='Password' />
+
+              <Input
+                name='passwordConfirmation'
+                type='password'
+                placeholder='Password Confirmation'
+              />
             </div>
             <div className={styles.clientRadio}>
-              <input name='role' value='buyer' id='buyer' type='radio'></input>
-              <ErrorMessage
-                name='role'
-                component='div'
-                className={styles.arrow}
-              />
+              <Input name='role' value='buyer' id='buyer' type='radio' />
+
               <label htmlFor='buyer' className={styles.joinAs}>
                 Join As a Buyer
                 <span className={styles.joinAsDesc}>
@@ -87,17 +57,8 @@ const SignUpForm = props => {
               </label>
             </div>
             <div className={styles.clientRadio}>
-              <input
-                name='role'
-                value='creative'
-                id='creative'
-                type='radio'
-              ></input>
-              <ErrorMessage
-                name='role'
-                component='div'
-                className={styles.arrow}
-              />
+              <Input name='role' value='creative' id='creative' type='radio' />
+
               <label htmlFor='creative' className={styles.joinAs}>
                 Join As a Creative or Marketplace Seller
                 <span className={styles.joinAsDesc}>
@@ -106,7 +67,7 @@ const SignUpForm = props => {
                 </span>
               </label>
             </div>
-
+           
             <Field
               className={styles.createAcc}
               type='submit'
